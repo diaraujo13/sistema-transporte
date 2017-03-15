@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="primeiraApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ consts.appName }}</title>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/assets/css/deps.min.css">
+  <link rel="stylesheet" href="/assets/css/app.min.css">
+  <link href="assets/lib/ngPrint.min.css">
+  <link rel="stylesheet" ; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAfCmJYF8-ZKFVRrQbpXDN--x7ny_XsvC0",
+      authDomain: "sistematransporte-a1762.firebaseapp.com",
+      databaseURL: "https://sistematransporte-a1762.firebaseio.com",
+      storageBucket: "sistematransporte-a1762.appspot.com",
+      messagingSenderId: "972671260659"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body class="skin-red fixed">
+  <div class="wrapper">
+    <header class="main-header" ng-include="'/template/header/header.html'"></header>
+    <aside class="main-sidebar" ng-include="'/template/menu/menu.html'"></aside>
+    <!-- ui-view é utilizado pelo ui-router para exibir a tela corrente àquela indica na rota da url -->
+    <div class="content-wrapper" ui-view></div>
+  </div>
+  <script type="text/javascript" src="/assets/lib/qrcode.js"></script>
+  <script src="/assets/js/deps.min.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+  <script src="assets/lib/ngPrint.min.js"></script>
+  <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/pt-br.js"></script>
+</body>
+
+</html>
